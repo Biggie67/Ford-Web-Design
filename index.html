@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ford Web Design — Honolulu, HI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">Ford Web Design</div>
+      <ul id="nav-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn-nav">Get Started</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-location">&#127965; Honolulu, Hawaii</p>
+      <h1>It's Time to<br /><span class="highlight">Level Up</span><br />Your Business.</h1>
+      <p class="sub">Professional websites for local businesses — built fast, built clean, built to convert.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Start Your Project</a>
+        <a href="#work" class="btn-ghost">See Our Work</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <p class="section-label">What We Do</p>
+      <h2>Everything You Need<br />to Get Online</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#9881;</div>
+          <h3>Custom Website Design</h3>
+          <p>A fully custom site built around your brand — no templates, no cookie-cutter layouts.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9889;</div>
+          <h3>Fast Turnaround</h3>
+          <p>Most sites delivered in under a week. You'll have a live site before your competitors blink.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128241;</div>
+          <h3>Mobile Optimized</h3>
+          <p>Every site looks perfect on phones, tablets, and desktops — no exceptions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127759;</div>
+          <h3>Domain & Hosting Setup</h3>
+          <p>We handle the technical side — domain, hosting, go-live. You just show up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="work">
+    <div class="container">
+      <p class="section-label">Our Work</p>
+      <h2>Built for Real Businesses</h2>
+      <div class="work-grid">
+        <div class="work-card" id="fresh-blendz-card" style="cursor:pointer;" onclick="openPreview()">
+          <div class="work-img" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80')">
+            <div class="work-img-overlay"><span>Preview Site ↗</span></div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Barbershop</span>
+            <h3>Fresh Blendz</h3>
+            <p>Brooklyn, NY — Full site with services, booking form, and animations.</p>
+          </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" onclick="closePreview()">
+          <div class="lightbox-inner" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closePreview()">✕</button>
+            <iframe src="https://biggie67.github.io/Fresh-Blendz" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div class="work-card work-card--cta">
+          <div class="work-cta-inner">
+            <p>Your business<br />could be next.</p>
+            <a href="#contact" class="btn-primary">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <div class="about-img">
+        <div class="about-img-placeholder"></div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">About</p>
+        <h2>Hi, I'm Eli Ford.</h2>
+        <p>I'm a web designer based in Honolulu, Hawaii helping local businesses get the online presence they deserve. I build clean, fast, professional websites that make your business look as good as it actually is.</p>
+        <p>No agencies. No middlemen. You work directly with me — which means faster turnaround, better communication, and a site you'll actually be proud of.</p>
+        <a href="#contact" class="btn-primary">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2>Let's Build Something.</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-block">
+            <h4>Email</h4>
+            <p>eli@fordwebdesign.com</p>
+          </div>
+          <div class="info-block">
+            <h4>Location</h4>
+            <p>Honolulu, Hawaii</p>
+          </div>
+          <div class="info-block">
+            <h4>Response Time</h4>
+            <p>Within 24 hours</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/mbdbbbae" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="text" name="business" placeholder="Business Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="tel" name="phone" placeholder="Phone Number" />
+            <select name="source">
+              <option value="">How did you hear about us?</option>
+              <option>Google Search</option>
+              <option>Referral</option>
+              <option>Social Media</option>
+              <option>Cold Call</option>
+              <option>Other</option>
+            </select>
+            <textarea name="message" placeholder="Tell me about your business and what you're looking for..." rows="4"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Ford Web Design &mdash; Honolulu, Hawaii</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.service-card, .work-card, .about-inner, .contact-grid, .info-block');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+
+    // Active nav
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav ul a:not(.btn-nav)');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('nav-active', link.getAttribute('href') === '#' + current);
+      });
+    }, { passive: true });
+
+    // Lightbox
+    function openPreview() {
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePreview() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePreview(); });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('open');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('open');
+      });
+    });
+
+    // Scroll indicator fade
+    const scrollIndicator = document.querySelector('.hero-scroll');
+    window.addEventListener('scroll', () => {
+      scrollIndicator.style.opacity = window.scrollY > 80 ? '0' : '1';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
