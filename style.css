@@ -141,6 +141,40 @@ nav ul a:hover, nav ul a.nav-active { color: var(--teal); }
 .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
 /* =====================
+   PRICING
+   ===================== */
+.addons { padding: 7rem 0; background: var(--navy); position: relative; overflow: hidden; }
+.addons-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 80% 15%, rgba(14,165,160,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 12% 90%, rgba(255,107,91,0.08) 0%, transparent 50%);
+}
+.addons .container { position: relative; z-index: 1; }
+.addons h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 1.2rem; line-height: 1.2; }
+.addons-intro { font-size: 1.05rem; color: var(--text); max-width: 600px; margin-bottom: 3.5rem; font-weight: 300; }
+.addons-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: stretch; }
+.svc-card {
+  flex: 1 1 300px; max-width: 380px;
+  background: var(--navy-3); border: 1px solid rgba(14, 165, 160, 0.1);
+  padding: 2.2rem 2rem; border-radius: 8px; transition: border-color 0.3s, transform 0.3s;
+  display: flex; flex-direction: column;
+}
+.svc-card:hover { border-color: var(--teal); transform: translateY(-4px); }
+.svc-name {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 0.7rem;
+}
+.svc-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.6rem; line-height: 1.6; }
+.svc-prices { margin-top: auto; }
+.svc-price-row { padding-top: 1.1rem; border-top: 1px solid rgba(255,255,255,0.07); }
+.svc-price-row + .svc-price-row { margin-top: 1.1rem; }
+.svc-price { font-size: 1.7rem; font-weight: 700; color: var(--white); line-height: 1; }
+.svc-price span { font-size: 0.8rem; font-weight: 400; color: var(--text-muted); margin-left: 0.35rem; }
+.svc-price-detail { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.45rem; line-height: 1.5; }
+.addons-cta { margin-top: 3rem; }
+
+/* =====================
    WORK
    ===================== */
 .work { padding: 7rem 0; background: var(--navy); }
