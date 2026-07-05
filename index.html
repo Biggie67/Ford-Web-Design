@@ -208,7 +208,7 @@
       <p class="section-label">Our Work</p>
       <h2>Built for Real Businesses</h2>
       <div class="work-grid">
-        <div class="work-card" id="fresh-blendz-card" style="cursor:pointer;" onclick="openPreview()">
+        <div class="work-card" id="fresh-blendz-card" style="cursor:pointer;" onclick="openPreview('https://biggie67.github.io/Fresh-Blendz')">
           <div class="work-img" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80')">
             <div class="work-img-overlay"><span>Preview Site ↗</span></div>
           </div>
@@ -219,11 +219,22 @@
           </div>
         </div>
 
+        <div class="work-card" id="gable-ridge-card" style="cursor:pointer;" onclick="openPreview('https://biggie67.github.io/Roofing-Demo')">
+          <div class="work-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80')">
+            <div class="work-img-overlay"><span>Preview Site ↗</span></div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Roofing Contractor</span>
+            <h3>Gable &amp; Ridge</h3>
+            <p>Denver, CO — Storm-restoration site with an animated roof-system breakdown.</p>
+          </div>
+        </div>
+
         <!-- LIGHTBOX -->
         <div id="lightbox" onclick="closePreview()">
           <div class="lightbox-inner" onclick="event.stopPropagation()">
             <button class="lightbox-close" onclick="closePreview()">✕</button>
-            <iframe src="https://biggie67.github.io/Fresh-Blendz" frameborder="0"></iframe>
+            <iframe src="about:blank" frameborder="0"></iframe>
           </div>
         </div>
         <div class="work-card work-card--cta">
@@ -326,7 +337,8 @@
     }, { passive: true });
 
     // Lightbox
-    function openPreview() {
+    function openPreview(url) {
+      document.querySelector('#lightbox iframe').src = url;
       document.getElementById('lightbox').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
