@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Hub | Ford Web Design</title>
+  <meta name="description" content="Manage your website in one place — edit photos and hours yourself, handle billing, and request changes." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .hub-hero { padding: 150px 24px 40px; text-align: center; }
+    .hub-hero h1 { font-family: "DM Serif Display", serif; font-size: clamp(2rem, 5vw, 3rem); color: #eef2f7; margin-bottom: 12px; }
+    .hub-hero p { color: #8fa0b5; max-width: 560px; margin: 0 auto; }
+    .hub-cards { max-width: 980px; margin: 30px auto 60px; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .hub-card { background: #0f1e35; border: 1px solid #162440; border-radius: 14px; padding: 28px 24px; }
+    .hub-card .emoji { font-size: 1.8rem; }
+    .hub-card h3 { color: #eef2f7; margin: 10px 0 8px; font-size: 1.15rem; }
+    .hub-card p { color: #8fa0b5; font-size: 0.95rem; line-height: 1.55; }
+    .hub-note { max-width: 640px; margin: 0 auto 80px; padding: 24px; background: #0f1e35; border-left: 3px solid #0ea5a0; border-radius: 10px; color: #c7d2e0; font-size: 0.98rem; }
+    .hub-note a { color: #14c4be; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="logo"><a href="../" style="color:inherit; text-decoration:none;">Ford Web Design</a></div>
+      <ul id="nav-menu">
+        <li><a href="../#services">Services</a></li>
+        <li><a href="../#pricing">Pricing</a></li>
+        <li><a href="../#work">Work</a></li>
+        <li><a href="../#contact" class="btn-nav">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hub-hero">
+    <h1>Client Hub</h1>
+    <p>Everything about your website, in one place — edit your photos and hours yourself,
+    handle billing, and send me any other change you need.</p>
+  </header>
+
+  <div class="hub-cards">
+    <div class="hub-card">
+      <span class="emoji">✏️</span>
+      <h3>Edit your website</h3>
+      <p>Your personal hub links to your Website Folder — drop photos in and they appear on
+      your site; tap “Hours &amp; Specials” to change hours or run an announcement banner.
+      Right from your phone.</p>
+    </div>
+    <div class="hub-card">
+      <span class="emoji">💳</span>
+      <h3>Billing</h3>
+      <p>Pay invoices, update your card, and view your plan through your secure Stripe
+      billing page — linked on your personal hub.</p>
+    </div>
+    <div class="hub-card">
+      <span class="emoji">📨</span>
+      <h3>Everything else</h3>
+      <p>New photos wired into the design, new pages, copy changes — send a request from
+      your hub and it's typically live within one business day.</p>
+    </div>
+  </div>
+
+  <div class="hub-note">
+    <strong>Where's my personal hub?</strong> Every client gets their own private hub page —
+    the link is in your welcome email. Lost it? Email
+    <a href="mailto:eli@fordwebdesign.com">eli@fordwebdesign.com</a> and I'll resend it.
+    <br /><br />
+    Not a client yet? <a href="../#contact">Let's fix that →</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ford Web Design &mdash; Honolulu, Hawaii</p>
+  </footer>
+
+</body>
+</html>
