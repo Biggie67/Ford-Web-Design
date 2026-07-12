@@ -22,6 +22,15 @@
     .hub-card p { color: #8fa0b5; font-size: 0.95rem; line-height: 1.55; }
     .hub-note { max-width: 640px; margin: 0 auto 80px; padding: 24px; background: #0f1e35; border-left: 3px solid #0ea5a0; border-radius: 10px; color: #c7d2e0; font-size: 0.98rem; }
     .hub-note a { color: #14c4be; }
+    .hub-signin { max-width: 480px; margin: 10px auto 40px; background: #0f1e35; border: 1px solid #162440; border-radius: 14px; padding: 28px 26px; }
+    .hub-signin h2 { color: #eef2f7; font-size: 1.2rem; margin-bottom: 14px; }
+    .hub-signin .row { display: flex; gap: 10px; }
+    .hub-signin input { flex: 1; background: #0a1628; border: 1px solid #162440; border-radius: 9px; color: #eef2f7; padding: 13px 14px; font-size: 1rem; font-family: inherit; }
+    .hub-signin input:focus { outline: 2px solid #0ea5a0; border-color: #0ea5a0; }
+    .hub-signin button { background: #0ea5a0; color: #04211f; border: 0; border-radius: 9px; font-weight: 700; font-size: 1rem; padding: 13px 20px; cursor: pointer; font-family: inherit; }
+    .hub-signin button:hover { background: #14c4be; }
+    .hub-signin .hint { color: #8fa0b5; font-size: 0.85rem; margin-top: 12px; }
+    .hub-signin .hint a { color: #14c4be; }
   </style>
 </head>
 <body>
@@ -43,6 +52,25 @@
     <p>Everything about your website, in one place — edit your photos and hours yourself,
     right from your phone, and handle billing.</p>
   </header>
+
+  <div class="hub-signin">
+    <h2>Client sign-in</h2>
+    <div class="row">
+      <input id="hubcode" type="text" placeholder="your-hub-code" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="Hub code" />
+      <button onclick="goHub()">Open my hub</button>
+    </div>
+    <p class="hint">Your hub code is in your welcome email. Lost it?
+    <a href="mailto:eli@fordwebdesign.com">Email Eli</a> and I'll resend it.</p>
+  </div>
+  <script>
+    function goHub() {
+      var c = document.getElementById('hubcode').value.trim().toLowerCase().replace(/\s+/g, '-');
+      if (c) window.location.href = '/clients/' + encodeURIComponent(c) + '.html';
+    }
+    document.getElementById('hubcode').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') goHub();
+    });
+  </script>
 
   <div class="hub-cards">
     <div class="hub-card">
