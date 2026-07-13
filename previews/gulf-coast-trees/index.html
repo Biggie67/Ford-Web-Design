@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Gulf Coast Trees — Tampa Bay's Tree Experts | Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bark:#2b1e12; --heart:#1d1409; --canopy:#1d4230; --moss:#5c7a5a;
+    --slate:#3f5165; --gold:#dfa054; --gold-d:#c88938; --paper:#f3ead9;
+    --paper-d:#eadfc8; --ink:#241c11; --mut:#6f6353;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.05}
+  img{max-width:100%}
+
+  .preview-bar{background:var(--heart);color:#cbbfa8;text-align:center;font-size:.78rem;padding:7px 12px;letter-spacing:.02em}
+  .preview-bar b{color:var(--gold)}
+
+  nav{position:sticky;top:0;z-index:60;background:var(--bark);display:flex;align-items:center;justify-content:space-between;padding:13px 5%}
+  .brand{color:var(--paper);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.01em}
+  .brand span{color:var(--gold)}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav ul a{color:#cbbfa8;text-decoration:none;font-size:.92rem;font-weight:600}
+  nav ul a:hover{color:var(--paper)}
+  .call-btn{background:var(--gold);color:var(--heart);font-weight:700;padding:10px 18px;border-radius:6px;text-decoration:none;font-size:.95rem;white-space:nowrap}
+  .call-btn:hover{background:var(--gold-d)}
+  @media(max-width:840px){nav ul{display:none}}
+
+  /* HERO */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;
+    background:linear-gradient(160deg,rgba(29,20,9,.25) 0%,rgba(29,20,9,.82) 78%),
+    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800&q=80') center/cover;
+    padding:120px 6% 70px}
+  .hero-inner{max-width:760px}
+  .storm-pill{display:inline-flex;align-items:center;gap:8px;background:var(--slate);color:#eef2f7;
+    border-radius:5px;padding:8px 14px;font-size:.85rem;font-weight:600;margin-bottom:22px}
+  .stars-chip{display:inline-flex;align-items:center;gap:8px;color:var(--paper);font-weight:600;
+    font-size:.92rem;margin:0 0 18px 14px;opacity:.95}
+  .stars-chip b{color:var(--gold)}
+  .hero h1{color:var(--paper);font-size:clamp(2.7rem,6.4vw,4.8rem);font-weight:800;letter-spacing:-.01em;margin-bottom:20px}
+  .hero h1 .ln{display:block;overflow:hidden}
+  .hero h1 .ln i{display:inline-block;font-style:normal;transform:translateY(110%);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero h1 .ln:nth-child(2) i{animation-delay:.12s}
+  .hero h1 .ln:nth-child(2) em{font-style:normal;color:var(--gold)}
+  @keyframes rise{to{transform:translateY(0)}}
+  .hero p{color:#e6dcc6;font-size:1.12rem;max-width:540px;margin-bottom:30px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:15px 26px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1rem}
+  .btn-gold{background:var(--gold);color:var(--heart)}
+  .btn-gold:hover{background:var(--gold-d)}
+  .btn-line{border:2px solid rgba(243,234,217,.55);color:var(--paper)}
+  .btn-line:hover{border-color:var(--paper)}
+
+  /* TRUST STRIP */
+  .trust{background:var(--heart);display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+  .trust div{padding:22px 14px;text-align:center;background:var(--bark)}
+  .trust b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;color:var(--gold)}
+  .trust span{color:#b8a98d;font-size:.82rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+  @media(max-width:700px){.trust{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:88px 6%}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--moss);margin-bottom:12px}
+  .sect-title{font-size:clamp(1.9rem,3.8vw,2.7rem);font-weight:800;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em}
+
+  /* SERVICES */
+  .services .sub{color:var(--mut);max-width:560px;margin-bottom:46px}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .svc{background:#fbf6ea;border:1px solid var(--paper-d);border-radius:10px;padding:30px 26px;
+    transition:transform .25s,box-shadow .25s}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(43,30,18,.12)}
+  .svc svg{width:38px;height:38px;stroke:var(--canopy);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .svc.feat{background:var(--canopy);border-color:var(--canopy)}
+  .svc.feat svg{stroke:var(--gold)}
+  .svc.feat h3,.svc.feat p{color:#eef3ea}
+  .svc.feat .tag{display:inline-block;background:var(--gold);color:var(--heart);font-size:.72rem;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;border-radius:4px;padding:3px 9px;margin-bottom:12px}
+  .svc h3{font-size:1.18rem;margin:14px 0 8px;color:var(--bark)}
+  .svc p{color:var(--mut);font-size:.94rem}
+
+  /* RINGS — signature */
+  .rings-sect{background:var(--paper-d);text-align:center}
+  .rings-wrap{max-width:460px;margin:34px auto 0;position:relative}
+  .rings-wrap svg{width:100%;height:auto;display:block}
+  .ring{transform-origin:center;opacity:0;transform:scale(.2);transition:opacity .5s,transform .8s cubic-bezier(.2,.7,.3,1)}
+  .rings-wrap.grow .ring{opacity:1;transform:scale(1)}
+  .ring-num{font-family:"Bricolage Grotesque",sans-serif;font-weight:800}
+  .rings-cap{color:var(--mut);max-width:420px;margin:26px auto 0;font-size:1rem}
+  .rings-cap b{color:var(--ink)}
+  .g-link{display:inline-block;margin-top:14px;color:var(--canopy);font-weight:700;text-decoration:none;border-bottom:2px solid var(--gold)}
+
+  /* WHY */
+  .why{background:var(--canopy)}
+  .why .eyebrow{color:var(--gold)}
+  .why .sect-title{color:#f0f4ec}
+  .why-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
+  .why p{color:#cfe0d0;margin-bottom:14px}
+  .why ul{list-style:none;margin-top:10px}
+  .why li{color:#eef3ea;padding:9px 0;font-weight:600;border-bottom:1px solid rgba(243,234,217,.12)}
+  .why li:last-child{border:0}
+  .why li::before{content:"— ";color:var(--gold);font-weight:800}
+  .photo-slot{border-radius:12px;overflow:hidden;position:relative;min-height:400px;
+    background:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80') center/cover}
+  .photo-note{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(29,20,9,.82);color:#e6dcc6;
+    font-size:.84rem;border-radius:8px;padding:11px 14px;backdrop-filter:blur(3px)}
+  .photo-note b{color:var(--gold)}
+  @media(max-width:880px){.why-wrap{grid-template-columns:1fr}.photo-slot{min-height:280px}}
+
+  /* STORM BAND */
+  .storm{background:linear-gradient(150deg,#2c3948 0%,var(--slate) 100%);color:#e8edf4}
+  .storm-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .storm .eyebrow{color:#a8bdd6}
+  .storm .sect-title{color:#f2f6fb}
+  .storm p{color:#c6d3e2}
+  .storm ol{margin:18px 0 26px 20px}
+  .storm li{padding:6px 0;font-weight:500}
+  @media(max-width:880px){.storm-wrap{grid-template-columns:1fr}}
+
+  /* CONTACT */
+  .contact{background:#fbf6ea}
+  .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px}
+  .c-line{padding:15px 0;border-bottom:1px solid var(--paper-d)}
+  .c-line b{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--moss);margin-bottom:3px}
+  .c-line a{color:var(--canopy);font-weight:700;text-decoration:none;font-size:1.1rem}
+  .quote-box{background:var(--bark);border-radius:12px;padding:36px 32px}
+  .quote-box h3{color:var(--paper);font-size:1.35rem;margin-bottom:12px}
+  .quote-box p{color:#cbbfa8;margin-bottom:24px;font-size:.98rem}
+  @media(max-width:880px){.contact-wrap{grid-template-columns:1fr}}
+
+  footer{background:var(--heart);color:#8d8064;text-align:center;padding:34px 20px 90px;font-size:.88rem}
+  footer b{color:var(--paper)}
+
+  /* sticky mobile call bar */
+  .mob-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:var(--gold);
+    color:var(--heart);text-align:center;font-weight:800;font-size:1.05rem;padding:16px;text-decoration:none}
+  @media(max-width:700px){.mob-call{display:block}}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .hero h1 .ln i{transform:none}
+    .reveal,.ring{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">🌱 <b>Design preview</b> built for Gulf Coast Trees by Ford Web Design — draft only, not your live site (yet).</div>
+
+<nav>
+  <div class="brand">Gulf Coast <span>Trees</span></div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="call-btn" href="tel:8138358733">Call (813) 835-8733</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="storm-pill">🌀 Storm-prep inspections open now — beat the first named storm</span><span class="stars-chip"><b>★ 5.0</b> · 261 Google reviews</span>
+    </div>
+    <h1>
+      <span class="ln"><i>Tampa Bay's</i></span>
+      <span class="ln"><i><em>tree experts.</em></i></span>
+    </h1>
+    <p>Family-owned. Certified. Trusted on 261 jobs and counting — precision trimming, safe removals,
+    and 24/7 storm response, with the permits and insurance paperwork handled for you.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#contact">Get a free quote</a>
+      <a class="btn btn-line" href="tel:8138358733">24/7 emergency line</a>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div><b>5.0★</b><span>Google rating</span></div>
+  <div><b>261</b><span>five-star reviews</span></div>
+  <div><b>Family</b><span>owned &amp; operated</span></div>
+  <div><b>Licensed</b><span>&amp; insured</span></div>
+</div>
+
+<section id="services" class="services">
+  <p class="eyebrow">What we do</p>
+  <h2 class="sect-title">Full-service tree care, one crew</h2>
+  <p class="sub">Residential and commercial across Tampa Bay — from a single backyard oak to full lot clearing.</p>
+  <div class="svc-grid">
+    <div class="svc feat reveal">
+      <span class="tag">July–Nov priority</span>
+      <svg viewBox="0 0 24 24"><path d="M12 3a8 8 0 0 1 8 8c0 2-1.5 3-3 3s-3-1-3-3 1.5-4 4-4"/><path d="M12 21a8 8 0 0 1-8-8c0-2 1.5-3 3-3s3 1 3 3-1.5 4-4 4"/></svg>
+      <h3>Storm readiness &amp; hurricane prep</h3>
+      <p>Inspection plus preventive trimming so your trees — and everything under them — are ready before the gulf starts spinning.</p>
+    </div>
+    <div class="svc reveal">
+      <svg viewBox="0 0 24 24"><path d="M6 21c3-1 5-3 6-6M12 15c4-1 6-5 6-11-6 0-10 2-11 6-1 3 1 5 5 5Z"/></svg>
+      <h3>Tree trimming &amp; pruning</h3>
+      <p>Precision cuts that keep trees healthy and hazards off your roof — leaving a clean, sculpted look.</p>
+    </div>
+    <div class="svc reveal">
+      <svg viewBox="0 0 24 24"><path d="M4 20h16M12 20V8M12 8 7 3M12 8l5-5M8.5 12 12 8l3.5 4"/></svg>
+      <h3>Tree removal</h3>
+      <p>Big, leaning, or hemmed in tight — removed safely and compliantly, property left tidy.</p>
+    </div>
+    <div class="svc reveal">
+      <svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+      <h3>24/7 emergency service</h3>
+      <p>Tree on the roof or limb on the line — call any hour, we answer and we come.</p>
+    </div>
+    <div class="svc reveal">
+      <svg viewBox="0 0 24 24"><path d="M3 17h13M5 17v-4h9l2 4M8 13V9h4v4M16 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM4 17a2 2 0 1 0 4 0"/></svg>
+      <h3>Lot clearing</h3>
+      <p>Sites cleared efficiently for construction or landscaping, with minimal disruption to what stays.</p>
+    </div>
+    <div class="svc reveal">
+      <svg viewBox="0 0 24 24"><path d="M8 3h8l2 3v15H6V6l2-3ZM9 10h6M9 14h6M9 18h4"/></svg>
+      <h3>Permit &amp; insurance assistance</h3>
+      <p>Tampa's tree permits are a maze. We handle the paperwork and the compliance — you don't learn city code.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="rings-sect">
+  <p class="eyebrow">Reviews</p>
+  <h2 class="sect-title">Count the rings</h2>
+  <div class="rings-wrap" id="rings">
+    <svg viewBox="0 0 400 400" role="img" aria-label="5.0 star rating shown at the center of tree growth rings">
+      <circle class="ring" cx="200" cy="200" r="186" fill="#e6d9bf" style="transition-delay:.05s"/>
+      <circle class="ring" cx="200" cy="200" r="160" fill="#dcccae" style="transition-delay:.15s"/>
+      <circle class="ring" cx="200" cy="200" r="136" fill="#cfbc99" style="transition-delay:.25s"/>
+      <circle class="ring" cx="200" cy="200" r="112" fill="#c0a982" style="transition-delay:.35s"/>
+      <circle class="ring" cx="200" cy="200" r="90" fill="#ad9268" style="transition-delay:.45s"/>
+      <circle class="ring" cx="200" cy="200" r="70" fill="#94784f" style="transition-delay:.55s"/>
+      <circle class="ring" cx="200" cy="200" r="52" fill="#77603c" style="transition-delay:.65s"/>
+      <circle class="ring" cx="200" cy="200" r="38" fill="#5a462a" style="transition-delay:.75s"/>
+      <g class="ring" style="transition-delay:.9s">
+        <circle cx="200" cy="200" r="26" fill="#2b1e12"/>
+        <text class="ring-num" x="200" y="207" text-anchor="middle" font-size="20" fill="#dfa054">5.0</text>
+      </g>
+    </svg>
+  </div>
+  <p class="rings-cap"><b>261 five-star Google reviews — every single one, five stars.</b><br/>
+  A rating like that isn't luck. It's rings: job after job, year after year.</p>
+  <a class="g-link" href="https://www.google.com/search?q=Gulf+Coast+Trees+Tampa" target="_blank" rel="noopener">Read the reviews on Google</a>
+</section>
+
+<section id="why" class="why">
+  <div class="why-wrap">
+    <div>
+      <p class="eyebrow">Why Gulf Coast Trees</p>
+      <h2 class="sect-title">The crew your neighbors already call</h2>
+      <p>No franchise, no broker subcontracting your job to strangers. The people who quote your
+      project are the certified pros who show up in your yard.</p>
+      <ul>
+        <li>Family-owned &amp; operated in Tampa</li>
+        <li>Certified professionals, licensed &amp; insured</li>
+        <li>Residential and commercial</li>
+        <li>Permits &amp; insurance paperwork handled</li>
+      </ul>
+    </div>
+    <div class="photo-slot reveal">
+      <div class="photo-note">📷 <b>Placeholder photo</b> — your real crew, trucks, and best jobs go here. Send a few favorites and they drop right in.</div>
+    </div>
+  </div>
+</section>
+
+<section class="storm">
+  <div class="storm-wrap">
+    <div>
+      <p class="eyebrow">Hurricane season · June–November</p>
+      <h2 class="sect-title">The cheapest storm damage is the kind that never happens</h2>
+      <p>Most hurricane tree damage comes from limbs and lean that were visible in July. A storm-prep
+      visit finds them first:</p>
+      <ol>
+        <li>Full-property tree inspection</li>
+        <li>Preventive trimming &amp; crown thinning</li>
+        <li>Risk report you can send your insurer</li>
+      </ol>
+      <a class="btn btn-gold" href="#contact">Book a storm-prep inspection</a>
+    </div>
+    <div class="photo-slot reveal" style="background-image:url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1200&q=80');min-height:340px">
+      <div class="photo-note">📷 Placeholder — a real photo of your storm work goes here.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-wrap">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 class="sect-title">Get your free quote</h2>
+      <div class="c-line"><b>Call or text</b><a href="tel:8138358733">(813) 835-8733</a></div>
+      <div class="c-line"><b>Email</b><a href="mailto:patrick@gulfcoasttree.biz">patrick@gulfcoasttree.biz</a></div>
+      <div class="c-line"><b>Serving</b>Tampa Bay &amp; surrounding areas</div>
+      <div class="c-line"><b>Emergencies</b>24/7 — call any time</div>
+    </div>
+    <div class="quote-box reveal">
+      <h3>Fastest way to a quote:</h3>
+      <p>Snap a photo of the tree, text it with your address, and you'll usually have an estimate the
+      same day. (On the live site, a quote form with photo upload goes right here.)</p>
+      <a class="btn btn-gold" href="tel:8138358733">Call now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Gulf Coast Trees</b> — Tampa Bay's tree experts · (813) 835-8733 · Tampa, FL</p>
+  <p style="margin-top:8px;font-size:.78rem">Design preview by Ford Web Design · fordwebdesign.com</p>
+</footer>
+
+<a class="mob-call" href="tel:8138358733">📞 Tap to call — free quote</a>
+
+<script>
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  var rings = document.getElementById('rings');
+  new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { rings.classList.add('grow'); obs.disconnect(); }
+    });
+  }, { threshold: 0.35 }).observe(rings);
+</script>
+
+</body>
+</html>
