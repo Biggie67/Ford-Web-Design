@@ -299,18 +299,19 @@
     }, { threshold: 0.1 });
     revealEls.forEach(el => { el.classList.add('reveal'); observer.observe(el); });
 
-    // Active nav
+    // Active nav — IntersectionObserver, no per-scroll layout reads
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav ul a:not(.btn-nav)');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    let activeId = '';
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) activeId = entry.target.id;
       });
       navLinks.forEach(link => {
-        link.classList.toggle('nav-active', link.getAttribute('href') === '#' + current);
+        link.classList.toggle('nav-active', link.getAttribute('href') === '#' + activeId);
       });
-    }, { passive: true });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(sec => spy.observe(sec));
 
     // Lightbox
     function openPreview(url) {
@@ -338,10 +339,15 @@
       });
     });
 
-    // Scroll indicator fade
+    // Scroll indicator fade — write only when state changes
     const scrollIndicator = document.querySelector('.hero-scroll');
+    let indicatorHidden = false;
     window.addEventListener('scroll', () => {
-      scrollIndicator.style.opacity = window.scrollY > 80 ? '0' : '1';
+      const hide = window.scrollY > 80;
+      if (hide !== indicatorHidden) {
+        indicatorHidden = hide;
+        scrollIndicator.style.opacity = hide ? '0' : '1';
+      }
     }, { passive: true });
   </script>
 
