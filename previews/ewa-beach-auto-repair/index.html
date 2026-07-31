@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>Ewa Beach Auto Repair — Auto Repair · Ewa Beach, Honolulu</title>
+<style>
+  :root{
+    --rust:#c1552c;
+    --rust-dk:#8f3b1c;
+    --steel:#2e3a45;
+    --steel-lt:#3f5063;
+    --cream:#f4ede1;
+    --ink:#1c2126;
+    --mut:#7c8794;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",-apple-system,"Avenir Next",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3{font-family:"Bricolage Grotesque","Hanken Grotesk",sans-serif}
+
+  .ribbon{background:var(--rust);color:var(--cream);text-align:center;font-size:.8rem;padding:7px 12px;font-weight:600}
+
+  nav{background:var(--cream);border-bottom:2px solid var(--ink);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50}
+  .logo{font-weight:800;font-size:1.15rem;color:var(--ink)}
+  .logo span{color:var(--rust)}
+  nav .call-top{background:var(--rust);color:var(--cream);text-decoration:none;font-weight:800;padding:9px 18px;border-radius:6px;font-size:.95rem;transition:transform .15s}
+  nav .call-top:hover{transform:translateY(-1px)}
+
+  header{position:relative;overflow:hidden;background:var(--ink)}
+  .hero-img{width:100%;height:56vh;min-height:320px;object-fit:cover;object-position:center 65%;display:block;filter:saturate(1.05) contrast(1.02);opacity:0;animation:fadeIn 1.1s ease forwards}
+  @keyframes fadeIn{from{opacity:0;transform:scale(1.03)}to{opacity:1;transform:scale(1)}}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,33,38,.15) 0%,rgba(28,33,38,.85) 82%,rgba(28,33,38,.97) 100%)}
+  .hwrap{position:absolute;left:0;right:0;bottom:0;padding:0 22px 40px;max-width:960px;margin:0 auto}
+  .kicker{display:inline-block;background:var(--rust);color:var(--cream);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:16px;opacity:0;animation:riseIn .7s ease .3s forwards}
+  h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.08;font-weight:800;color:var(--cream);text-wrap:balance;max-width:700px;opacity:0;animation:riseIn .7s ease .45s forwards}
+  h1 em{font-style:normal;color:var(--rust)}
+  .sub{max-width:560px;margin:16px 0 26px;font-size:1.08rem;color:#c9cfd6;opacity:0;animation:riseIn .7s ease .6s forwards}
+  @keyframes riseIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:riseIn .7s ease .75s forwards}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:8px;font-size:1.02rem;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.solid{background:var(--rust);color:var(--cream);box-shadow:0 6px 18px rgba(193,85,44,.35)}
+  .btn.line{border:2px solid rgba(244,237,225,.35);color:var(--cream)}
+
+  .trust{background:var(--steel);color:var(--cream);padding:20px 22px}
+  .trust-in{max-width:960px;margin:0 auto;display:flex;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center;font-size:.95rem}
+  .trust-in b{color:var(--cream)}
+  .trust-in .st{color:#ffb37a}
+
+  section{padding:64px 22px}
+  .wrap{max-width:960px;margin:0 auto}
+  .eyebrow{color:var(--rust);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+  h2{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:14px;text-wrap:balance}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+  .svc{background:#fff;border:1px solid #e4d9c8;border-radius:12px;padding:22px;transition:transform .2s,box-shadow .2s}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(28,33,38,.08)}
+  .svc .n{font-family:"Bricolage Grotesque",sans-serif;color:var(--rust);font-weight:800;font-size:1.4rem;display:block;margin-bottom:8px}
+  .svc h3{font-size:1.05rem;margin-bottom:6px}
+  .svc p{font-size:.92rem;color:var(--mut)}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:36px}
+  .gallery img{width:100%;height:190px;object-fit:cover;border-radius:12px;border:1px solid #e4d9c8;transition:transform .35s ease,filter .35s ease}
+  .gallery a{display:block;overflow:hidden;border-radius:12px}
+  .gallery a:hover img{transform:scale(1.06)}
+
+  .why{background:var(--ink);color:var(--cream)}
+  .why .eyebrow{color:#ffb37a}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .why-item{border-top:3px solid var(--rust);padding-top:14px}
+  .why-item h3{font-size:1.02rem;margin-bottom:6px}
+  .why-item p{font-size:.92rem;color:#a9b2bb}
+
+  .review-band{background:#fff;text-align:center;border-top:1px solid #e4d9c8;border-bottom:1px solid #e4d9c8}
+  .big-stars{font-size:2rem;color:var(--rust);letter-spacing:.12em;margin-bottom:8px}
+  .review-band .q{font-size:1.25rem;max-width:640px;margin:0 auto;font-weight:600;text-wrap:balance}
+  .review-band .attr{margin-top:10px;color:var(--mut);font-size:.9rem}
+
+  .c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .c-card{background:#fff;border:1px solid #e4d9c8;border-radius:12px;padding:22px}
+  .c-card h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin-bottom:8px}
+  .c-card p,.c-card a{color:var(--ink);font-size:1.05rem;text-decoration:none;font-weight:600}
+  .c-card .hours{font-size:.95rem;font-weight:400;color:var(--mut)}
+
+  footer{background:var(--ink);color:#7c8794;text-align:center;padding:26px 20px;font-size:.85rem}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;background:var(--rust);text-align:center;padding:13px;z-index:60;display:none}
+  .callbar a{color:var(--cream);font-weight:800;text-decoration:none;font-size:1.05rem}
+  @media(max-width:640px){.callbar{display:block} body{padding-bottom:52px}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">✨ Free design preview — built for Ewa Beach Auto Repair by Ford Web Design · text or call Eli to make it yours</div>
+
+<nav>
+  <div class="logo">Ewa Beach <span>Auto Repair</span></div>
+  <a class="call-top" href="tel:8087442020">📞 (808) 744-2020</a>
+</nav>
+
+<header>
+  <img class="hero-img" src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlySX7xeD1ZQQwWkv5x3dTFkJ3qpcT84BDsL72YdcqeGUgrW0XsHFFMGFBGatw9U-7ymuW5fARWsLkmr_yCheTpqzR7OgvVNpXiyZ3qrPAL9yCbLQ15brwK23_GKGYDQRTkJ1Df=w1200-h700-k-no" alt="Ewa Beach Auto Repair shop"/>
+  <div class="hero-overlay"></div>
+  <div class="hwrap">
+    <span class="kicker">Ewa Beach Shopping Center · 213 Google Reviews</span>
+    <h1>Trusted with <em>everything</em> from daily drivers to a red Ferrari.</h1>
+    <p class="sub">213 reviews, a 4.2-star average, and a shop that clearly doesn't turn work away — that's rare in Ewa Beach.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="tel:8087442020">Get a Free Estimate</a>
+      <a class="btn line" href="#services">What We Do</a>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="trust-in">
+    <div><span class="st">★★★★☆</span><br/><b>4.2 on Google</b></div>
+    <div><b>213 reviews</b><br/>one of the most-reviewed shops on this side of O'ahu</div>
+    <div><b>Ewa Beach Shopping Center</b><br/>easy to find, easy to park</div>
+    <div><b>Veteran-owned</b><br/>LGBTQ+ friendly</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow reveal">Services</p>
+    <h2 class="reveal">General repair, done right, for whatever rolls in.</h2>
+    <div class="svc-grid reveal">
+      <div class="svc"><span class="n">01</span><h3>General Auto Repair</h3><p>Full-service repair for everyday drivers — the kind of steady, honest work that earns 213 reviews.</p></div>
+      <div class="svc"><span class="n">02</span><h3>Specialty &amp; Performance</h3><p>Comfortable working on more than the ordinary — from trucks to exotics, the shop handles it.</p></div>
+      <div class="svc"><span class="n">03</span><h3>Straight Answers</h3><p>Estimates and explanations you can actually understand before you say yes.</p></div>
+    </div>
+
+    <div class="gallery reveal">
+      <a href="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm33-AgPGOUsHSnkbCIT6zViMttHR4aOTThUp8vCqG-XZF4peTDPZTVaGWuekpzTU8S1I04J0hrL8XMwCGaaTFiJphtEwXzvcUZiVVA06FkX9cLAcBzTIc3h2WjmyAHestrzWySuMvHqrwk=w800-h600-k-no" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm33-AgPGOUsHSnkbCIT6zViMttHR4aOTThUp8vCqG-XZF4peTDPZTVaGWuekpzTU8S1I04J0hrL8XMwCGaaTFiJphtEwXzvcUZiVVA06FkX9cLAcBzTIc3h2WjmyAHestrzWySuMvHqrwk=w500-h380-k-no" alt="Shop bay"/></a>
+      <a href="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloTjgqphE77VecQI8Sj76_EqwhIf5kQpMIe8FsU3-iH5spStpB3j5gQfpMRZnRt4Giqos7TKubDrraSnxsKTonoiVRanVCQzeZbgH-kNMnc_FzrHN2yOhva2Z4UWr9JcYx6npIjmjcX2sl=w800-h600-k-no" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloTjgqphE77VecQI8Sj76_EqwhIf5kQpMIe8FsU3-iH5spStpB3j5gQfpMRZnRt4Giqos7TKubDrraSnxsKTonoiVRanVCQzeZbgH-kNMnc_FzrHN2yOhva2Z4UWr9JcYx6npIjmjcX2sl=w500-h380-k-no" alt="Shop entrance"/></a>
+      <a href="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlIUk_4GI0x8TF5ZNmOeRstLJwO2gEqRuVF_XqyG5VV6LjWMl_oyoUWMNW9kYqAWBMEps1Ka32SVh6ZnEjJ7iOO1oC6BuhI2CsjFjm9k9PVPFCgKVafQGiplPQZuRUkYaOBgERm=w800-h600-k-no" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlIUk_4GI0x8TF5ZNmOeRstLJwO2gEqRuVF_XqyG5VV6LjWMl_oyoUWMNW9kYqAWBMEps1Ka32SVh6ZnEjJ7iOO1oC6BuhI2CsjFjm9k9PVPFCgKVafQGiplPQZuRUkYaOBgERm=w500-h380-k-no" alt="Repair work"/></a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <p class="eyebrow reveal">Why Ewa Beach Auto Repair</p>
+    <h2 class="reveal">213 people already told Google. Now it's your turn to see it.</h2>
+    <div class="why-grid reveal">
+      <div class="why-item"><h3>Proven volume</h3><p>213 reviews means hundreds of cars fixed right — that kind of track record isn't an accident.</p></div>
+      <div class="why-item"><h3>Central location</h3><p>Right in the Ewa Beach Shopping Center — easy drop-off, easy pickup.</p></div>
+      <div class="why-item"><h3>Values-driven shop</h3><p>Veteran-owned, LGBTQ+ friendly — a shop that's built trust with the whole community.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="review-band">
+  <div class="wrap reveal">
+    <div class="big-stars">★★★★☆</div>
+    <p class="q">4.2 stars across 213 reviews — one of the most-reviewed repair shops in Ewa Beach.</p>
+    <p class="attr">Ewa Beach Auto Repair · Ewa Beach Shopping Center</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Come see us</p>
+    <h2 class="reveal">Free estimate. No pressure.</h2>
+    <div class="c-grid reveal">
+      <div class="c-card"><h3>Call</h3><a href="tel:8087442020">(808) 744-2020</a></div>
+      <div class="c-card"><h3>Visit</h3><p>91-919 Fort Weaver Rd, Ste 115<br/>Ewa Beach, HI 96706<br/>Ewa Beach Shopping Center</p></div>
+      <div class="c-card"><h3>Hours</h3><p class="hours">Call ahead for current hours</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>Ewa Beach Auto Repair · 91-919 Fort Weaver Rd Ste 115, Ewa Beach · (808) 744-2020<br/>Design preview by Ford Web Design — fordwebdesign.com</footer>
+
+<div class="callbar"><a href="tel:8087442020">📞 Tap to call — (808) 744-2020</a></div>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
