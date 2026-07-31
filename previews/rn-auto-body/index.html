@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>R N Auto Body &amp; Paint — Collision Repair &amp; Paint, Kapahulu · Honolulu</title>
+<style>
+  /* ── Body-shop material palette: primer gray, masking-tape blue, clearcoat white, safety orange ── */
+  :root{
+    --primer:#3d4247;      /* primer gray — deep neutral ground */
+    --chassis:#23272b;     /* darker steel */
+    --tape:#2f6f8f;        /* masking-tape blue */
+    --clearcoat:#f4f3ef;   /* warm shop-white */
+    --safety:#e8762d;      /* safety orange accent */
+    --sand:#c9c4b8;        /* wet-sand beige */
+    --ink:#1b1e21;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",-apple-system,"Avenir Next",sans-serif;color:var(--ink);background:var(--clearcoat);line-height:1.6}
+  h1,h2,h3,.disp{font-family:"Bricolage Grotesque","Hanken Grotesk",sans-serif}
+
+  /* preview ribbon */
+  .ribbon{background:var(--ink);color:var(--sand);text-align:center;font-size:.8rem;padding:7px 12px;letter-spacing:.04em}
+  .ribbon b{color:var(--safety)}
+
+  /* paint-coat stripe divider: primer → base → clear */
+  .coats{height:10px;background:linear-gradient(90deg,var(--primer) 0 33%,var(--tape) 33% 66%,var(--sand) 66% 100%)}
+
+  nav{background:var(--chassis);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50}
+  .logo{color:var(--clearcoat);font-weight:800;font-size:1.05rem;letter-spacing:.02em}
+  .logo span{color:var(--safety)}
+  nav .call-top{background:var(--safety);color:#fff;text-decoration:none;font-weight:800;padding:9px 18px;border-radius:6px;font-size:.95rem}
+
+  header{background:var(--primer);color:var(--clearcoat);padding:72px 22px 64px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-80px;top:-40px;width:380px;height:380px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, rgba(232,118,45,.25), transparent 60%)}
+  .hwrap{max-width:960px;margin:0 auto;position:relative;z-index:2}
+  .kicker{display:inline-block;background:var(--tape);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:4px;margin-bottom:18px}
+  h1{font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.08;font-weight:800;text-wrap:balance}
+  h1 em{font-style:normal;color:var(--safety)}
+  .sub{max-width:600px;margin:18px 0 30px;font-size:1.08rem;color:var(--sand)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:8px;font-size:1.02rem}
+  .btn.solid{background:var(--safety);color:#fff}
+  .btn.ghost{border:2px solid var(--sand);color:var(--clearcoat)}
+
+  .trust{background:var(--chassis);color:var(--sand);padding:18px 22px}
+  .trust-in{max-width:960px;margin:0 auto;display:flex;gap:28px;flex-wrap:wrap;justify-content:center;text-align:center;font-size:.95rem}
+  .trust-in b{color:var(--clearcoat)}
+  .trust-in .stars{color:var(--safety);letter-spacing:.1em}
+
+  section{padding:64px 22px}
+  .wrap{max-width:960px;margin:0 auto}
+  .eyebrow{color:var(--tape);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:14px;text-wrap:balance}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+  .svc{background:#fff;border:1px solid #e2ded4;border-left:5px solid var(--tape);border-radius:10px;padding:20px}
+  .svc h3{font-size:1.05rem;margin-bottom:6px}
+  .svc p{font-size:.92rem;color:#555}
+  .svc .ico{font-size:1.5rem;margin-bottom:10px;display:block}
+
+  .loaner{background:var(--tape);color:#fff;border-radius:14px;padding:34px 30px;margin-top:40px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .loaner .big{font-size:2.6rem}
+  .loaner h3{font-size:1.35rem;margin-bottom:6px}
+  .loaner p{color:#dcebf3;max-width:520px}
+
+  .photo-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:28px}
+  .photo-slot{background:repeating-linear-gradient(45deg,#e7e3d9,#e7e3d9 12px,#ddd8cc 12px,#ddd8cc 24px);border:2px dashed var(--sand);border-radius:10px;min-height:170px;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center}
+  .photo-slot p{font-size:.85rem;color:#6b6558;max-width:200px}
+
+  .why{background:var(--chassis);color:var(--clearcoat)}
+  .why h2{color:#fff}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .why-item{border-top:3px solid var(--safety);padding-top:14px}
+  .why-item h3{font-size:1.02rem;margin-bottom:6px}
+  .why-item p{font-size:.92rem;color:var(--sand)}
+
+  .review-band{background:#fff;border-top:1px solid #e2ded4;border-bottom:1px solid #e2ded4}
+  .review-band .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .big-stars{font-size:2rem;color:var(--safety);letter-spacing:.12em;margin-bottom:8px}
+  .review-band .q{font-size:1.25rem;max-width:640px;font-weight:600;text-wrap:balance}
+  .review-band .attr{margin-top:10px;color:#777;font-size:.9rem}
+
+  .contact{background:var(--primer);color:var(--clearcoat)}
+  .contact h2{color:#fff}
+  .c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .c-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px}
+  .c-card h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--sand);margin-bottom:8px}
+  .c-card p,.c-card a{color:var(--clearcoat);font-size:1.05rem;text-decoration:none;font-weight:600}
+  .c-card .hours{font-size:.95rem;font-weight:400;color:var(--sand)}
+
+  footer{background:var(--ink);color:#8b8b85;text-align:center;padding:26px 20px;font-size:.85rem}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;background:var(--safety);text-align:center;padding:13px;z-index:60;display:none}
+  .callbar a{color:#fff;font-weight:800;text-decoration:none;font-size:1.05rem}
+  @media(max-width:640px){.callbar{display:block} body{padding-bottom:52px}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">🔧 <b>Free design preview</b> — built for R N Auto Body &amp; Paint by Ford Web Design · your site, your call — text or call Eli to make it real</div>
+
+<nav>
+  <div class="logo">R N <span>Auto Body</span> &amp; Paint</div>
+  <a class="call-top" href="tel:8087320069">📞 (808) 732-0069</a>
+</nav>
+
+<header>
+  <div class="hwrap">
+    <span class="kicker">Kapahulu · Honolulu · Since 2003</span>
+    <h1>Dents happen.<br/><em>Honest repair</em> is a choice.</h1>
+    <p class="sub">Collision repair and paint done right, by the shop Kapahulu has trusted for over twenty years — with a loaner car so your life doesn't stop while yours is in ours.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="tel:8087320069">Get a Free Estimate</a>
+      <a class="btn ghost" href="#services">What We Do</a>
+    </div>
+  </div>
+</header>
+<div class="coats"></div>
+
+<div class="trust">
+  <div class="trust-in">
+    <div><span class="stars">★★★★½</span><br/><b>4.5 rating</b> · 45 Google reviews</div>
+    <div><b>Est. 2003</b><br/>20+ years on Kapahulu Ave</div>
+    <div><b>Loaner cars</b><br/>stay mobile while we work</div>
+    <div><b>Free estimates</b><br/>honest numbers, no surprises</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>From fender-bender to full respray.</h2>
+    <div class="svc-grid">
+      <div class="svc"><span class="ico">🚗</span><h3>Collision Repair</h3><p>Accident damage repaired straight and true — panels, bumpers, and everything behind them.</p></div>
+      <div class="svc"><span class="ico">🎨</span><h3>Auto Paint</h3><p>Factory-match color and a finish that disappears into the original. You won't find the line.</p></div>
+      <div class="svc"><span class="ico">🔨</span><h3>Dent &amp; Ding Removal</h3><p>Parking-lot souvenirs and door dings, gone — without repainting the whole panel when it can be saved.</p></div>
+      <div class="svc"><span class="ico">📋</span><h3>Free Estimates</h3><p>Bring it by, get a straight answer and a fair number. No pressure, no padding.</p></div>
+    </div>
+
+    <div class="loaner">
+      <div class="big">🔑</div>
+      <div>
+        <h3>Your life doesn't stop for body work.</h3>
+        <p>Ask about our loaner and courtesy cars — one of the only shops in town that keeps you driving while your car's being made right.</p>
+      </div>
+    </div>
+
+    <div class="photo-strip">
+      <div class="photo-slot"><p>📷 Placeholder — your shop front on Kapahulu Ave goes here</p></div>
+      <div class="photo-slot"><p>📷 Placeholder — a before/after repair you're proud of</p></div>
+      <div class="photo-slot"><p>📷 Placeholder — the crew &amp; the paint booth</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="coats"></div>
+
+<section class="why">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--safety)">Why R N</p>
+    <h2>The shop your neighbors would send you to.</h2>
+    <div class="why-grid">
+      <div class="why-item"><h3>Kind. Humble. Honest.</h3><p>Not our words — that's how customers describe us in their reviews, over and over, for twenty years.</p></div>
+      <div class="why-item"><h3>Straight talk on every job</h3><p>We'll tell you what needs fixing, what can wait, and what it'll cost — before we touch a panel.</p></div>
+      <div class="why-item"><h3>Kapahulu, through and through</h3><p>Same neighborhood, same phone number, since 2003. We're not going anywhere — and we treat customers like it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="review-band">
+  <div class="wrap">
+    <div class="big-stars">★★★★★</div>
+    <p class="q">"Incredibly kind, humble, honest, and easy to work with."</p>
+    <p class="attr">— what Google reviewers keep saying · 4.5 across 45 reviews</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--safety)">Come see us</p>
+    <h2>Free estimate. Honest answer. Loaner if you need one.</h2>
+    <div class="c-grid">
+      <div class="c-card"><h3>Call</h3><a href="tel:8087320069">(808) 732-0069</a></div>
+      <div class="c-card"><h3>Visit</h3><p>521 Kapahulu Ave<br/>Honolulu, HI 96815</p></div>
+      <div class="c-card"><h3>Hours</h3><p class="hours">Mon–Fri · 8:00am – 5:00pm<br/>Sat &amp; Sun · Closed</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>R N Auto Body &amp; Paint · 521 Kapahulu Ave, Honolulu · (808) 732-0069<br/>Design preview by Ford Web Design — fordwebdesign.com</footer>
+
+<div class="callbar"><a href="tel:8087320069">📞 Tap to call R N Auto Body — (808) 732-0069</a></div>
+
+</body>
+</html>
