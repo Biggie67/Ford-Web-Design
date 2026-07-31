@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>Shon's Auto Body Repair &amp; Painting — Kaka'ako, Honolulu · Since the '80s</title>
+<style>
+  /* ── Lacquer & paint-booth palette: oxblood lacquer, charcoal, cream, PPG-chip accents ── */
+  :root{
+    --lacquer:#7a1f2b;     /* deep oxblood — a paint color you'd order */
+    --lacquer-dk:#5a1620;
+    --char:#2a2a2e;
+    --cream:#f6f1e7;
+    --chip-blue:#33658a;
+    --chip-gold:#d9a441;
+    --ink:#221f20;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",-apple-system,"Avenir Next",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:"Bricolage Grotesque","Hanken Grotesk",sans-serif}
+
+  .ribbon{background:var(--char);color:#cfc8bb;text-align:center;font-size:.8rem;padding:7px 12px}
+  .ribbon b{color:var(--chip-gold)}
+
+  /* paint-chip strip: like a PPG fan deck */
+  .chips{display:flex;height:12px}
+  .chips span{flex:1}
+  .chips .c1{background:var(--lacquer)} .chips .c2{background:var(--chip-blue)}
+  .chips .c3{background:var(--chip-gold)} .chips .c4{background:var(--char)} .chips .c5{background:#8d9b6a}
+
+  nav{background:var(--cream);border-bottom:1px solid #e3dccd;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50}
+  .logo{font-weight:800;font-size:1.05rem;color:var(--ink)}
+  .logo span{color:var(--lacquer)}
+  nav .call-top{background:var(--lacquer);color:#fff;text-decoration:none;font-weight:800;padding:9px 18px;border-radius:6px;font-size:.95rem}
+
+  header{background:var(--cream);padding:70px 22px 56px}
+  .hwrap{max-width:960px;margin:0 auto}
+  .kicker{color:var(--lacquer);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;display:block;margin-bottom:16px}
+  h1{font-size:clamp(2.2rem,6.4vw,3.6rem);line-height:1.05;font-weight:800;color:var(--ink);text-wrap:balance;max-width:800px}
+  h1 em{font-style:normal;color:var(--lacquer)}
+  .sub{max-width:620px;margin:20px 0 30px;font-size:1.1rem;color:#5c564c}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:8px;font-size:1.02rem}
+  .btn.solid{background:var(--lacquer);color:#fff}
+  .btn.line{border:2px solid var(--char);color:var(--char)}
+
+  .trust{background:var(--char);color:#cfc8bb;padding:20px 22px}
+  .trust-in{max-width:960px;margin:0 auto;display:flex;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center;font-size:.95rem}
+  .trust-in b{color:var(--cream)}
+  .trust-in .st{color:var(--chip-gold)}
+
+  section{padding:64px 22px}
+  .wrap{max-width:960px;margin:0 auto}
+  .eyebrow{color:var(--chip-blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+  h2{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:14px;color:var(--ink);text-wrap:balance}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+  .svc{background:#fff;border:1px solid #e6dfd0;border-radius:12px;padding:22px;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+  .svc:nth-child(1)::before{background:var(--lacquer)}
+  .svc:nth-child(2)::before{background:var(--chip-blue)}
+  .svc:nth-child(3)::before{background:var(--chip-gold)}
+  .svc:nth-child(4)::before{background:#8d9b6a}
+  .svc h3{font-size:1.05rem;margin-bottom:6px}
+  .svc p{font-size:.92rem;color:#5c564c}
+
+  .insurance{background:var(--chip-blue);color:#fff;border-radius:14px;padding:32px 30px;margin-top:40px}
+  .insurance h3{font-size:1.3rem;margin-bottom:8px}
+  .insurance p{color:#d7e5ef;max-width:640px}
+
+  .photo-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:28px}
+  .photo-slot{background:repeating-linear-gradient(45deg,#eee8da,#eee8da 12px,#e4ddcb 12px,#e4ddcb 24px);border:2px dashed #cbc2ad;border-radius:10px;min-height:170px;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center}
+  .photo-slot p{font-size:.85rem;color:#77705f;max-width:210px}
+
+  .legacy{background:var(--lacquer);color:var(--cream)}
+  .legacy h2{color:#fff}
+  .legacy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .l-item{border-top:3px solid var(--chip-gold);padding-top:14px}
+  .l-item h3{font-size:1.02rem;margin-bottom:6px;color:#fff}
+  .l-item p{font-size:.92rem;color:#eddfd2}
+
+  .review-band{background:#fff;border-top:1px solid #e6dfd0;border-bottom:1px solid #e6dfd0;text-align:center}
+  .big-stars{font-size:2rem;color:var(--chip-gold);letter-spacing:.12em;margin-bottom:8px}
+  .review-band .q{font-size:1.25rem;max-width:640px;margin:0 auto;font-weight:600;text-wrap:balance}
+  .review-band .attr{margin-top:10px;color:#8a8272;font-size:.9rem}
+
+  .contact{background:var(--char);color:var(--cream)}
+  .contact h2{color:#fff}
+  .c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .c-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px}
+  .c-card h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:#a89f8e;margin-bottom:8px}
+  .c-card p,.c-card a{color:var(--cream);font-size:1.05rem;text-decoration:none;font-weight:600}
+  .c-card .hours{font-size:.95rem;font-weight:400;color:#cfc8bb}
+
+  footer{background:#1b191a;color:#7d776b;text-align:center;padding:26px 20px;font-size:.85rem}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;background:var(--lacquer);text-align:center;padding:13px;z-index:60;display:none}
+  .callbar a{color:#fff;font-weight:800;text-decoration:none;font-size:1.05rem}
+  @media(max-width:640px){.callbar{display:block} body{padding-bottom:52px}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">🎨 <b>Free design preview</b> — built for Shon's Auto Body &amp; Painting by Ford Web Design · text or call Eli to make it yours</div>
+<div class="chips"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span></div>
+
+<nav>
+  <div class="logo">Shon's <span>Auto Body</span> &amp; Painting</div>
+  <a class="call-top" href="tel:8085967001">📞 (808) 596-7001</a>
+</nav>
+
+<header>
+  <div class="hwrap">
+    <span class="kicker">Kaka'ako · Honolulu · 40+ Years</span>
+    <h1>Paint so right,<br/>you'll forget <em>which side got hit.</em></h1>
+    <p class="sub">Four decades of collision repair and PPG-certified paint work in the heart of Kaka'ako — with every insurance carrier welcome and a straight answer on every estimate.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="tel:8085967001">Call or Text for an Estimate</a>
+      <a class="btn line" href="#services">Our Work</a>
+    </div>
+  </div>
+</header>
+<div class="chips"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span></div>
+
+<div class="trust">
+  <div class="trust-in">
+    <div><span class="st">★★★★½</span><br/><b>4.5 on Google</b></div>
+    <div><b>40+ years</b><br/>same Kaka'ako neighborhood</div>
+    <div><b>PPG-certified paint</b><br/>factory-grade color &amp; finish</div>
+    <div><b>All insurance carriers</b><br/>we help with the claim</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">What we do</p>
+    <h2>Collision to clearcoat, under one roof.</h2>
+    <div class="svc-grid">
+      <div class="svc"><h3>Collision Repair</h3><p>Straightened, aligned, and rebuilt right — from parking-lot dings to serious accident damage.</p></div>
+      <div class="svc"><h3>Complete Paint Jobs</h3><p>Full resprays with PPG-certified products — deep, durable color that holds up to Hawaii sun and salt air.</p></div>
+      <div class="svc"><h3>Custom Paint Work</h3><p>Color changes and custom finishes for owners who want their car to be one of one.</p></div>
+      <div class="svc"><h3>Rust Repair</h3><p>Island cars rust — we cut it out, treat it, and refinish so it doesn't come back next year.</p></div>
+    </div>
+
+    <div class="insurance">
+      <h3>Accident? We speak insurance.</h3>
+      <p>Shon's accepts all insurance carriers and walks you through the claims process — estimates, paperwork, and repairs handled by people who've done it for forty years.</p>
+    </div>
+
+    <div class="photo-strip">
+      <div class="photo-slot"><p>📷 Placeholder — the shop on Kona St goes here</p></div>
+      <div class="photo-slot"><p>📷 Placeholder — a paint job you're proud of (before &amp; after)</p></div>
+      <div class="photo-slot"><p>📷 Placeholder — Shon &amp; the crew, real photos only</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="legacy">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--chip-gold)">Since the '80s</p>
+    <h2>Forty years in Kaka'ako. Same standards, every decade.</h2>
+    <div class="legacy-grid">
+      <div class="l-item"><h3>Owner-run, locally owned</h3><p>You talk to the people doing the work — not a call center, not a chain.</p></div>
+      <div class="l-item"><h3>Certified, not just experienced</h3><p>PPG-certified paint products and processes — the same standard factories hold.</p></div>
+      <div class="l-item"><h3>Honest estimates</h3><p>What it needs, what it doesn't, and what it costs — before we start.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="review-band">
+  <div class="wrap">
+    <div class="big-stars">★★★★★</div>
+    <p class="q">"Excellence in repair and paint" — that's the reputation four decades in one neighborhood builds.</p>
+    <p class="attr">Rated 4.5 on Google reviews</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--chip-gold)">Come by</p>
+    <h2>Free estimate — call, text, or swing through.</h2>
+    <div class="c-grid">
+      <div class="c-card"><h3>Call / Text</h3><a href="tel:8085967001">(808) 596-7001</a></div>
+      <div class="c-card"><h3>Visit</h3><p>1124 Kona St<br/>Honolulu, HI 96814</p></div>
+      <div class="c-card"><h3>Hours</h3><p class="hours">Mon–Fri · 8:00am – 4:30pm<br/>Sat &amp; Sun · Closed</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>Shon's Auto Body Repair &amp; Painting · 1124 Kona St, Honolulu · (808) 596-7001<br/>Design preview by Ford Web Design — fordwebdesign.com</footer>
+
+<div class="callbar"><a href="tel:8085967001">📞 Tap to call Shon's — (808) 596-7001</a></div>
+
+</body>
+</html>

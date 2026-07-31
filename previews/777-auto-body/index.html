@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>777 Auto Body Shop — Collision Repair · Mapunapuna, Honolulu</title>
+<style>
+  /* ── Black & gold: jet enamel, triple-seven gold, headlight white ── */
+  :root{
+    --jet:#141414;
+    --panel:#1f1f22;
+    --gold:#d4af37;
+    --gold-dk:#a8862a;
+    --white:#f7f5f0;
+    --smoke:#9a978f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",-apple-system,"Avenir Next",sans-serif;color:var(--white);background:var(--jet);line-height:1.6}
+  h1,h2,h3{font-family:"Bricolage Grotesque","Hanken Grotesk",sans-serif}
+
+  .ribbon{background:var(--gold);color:#141414;text-align:center;font-size:.8rem;padding:7px 12px;font-weight:600}
+
+  nav{background:var(--jet);border-bottom:1px solid #2c2c30;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50}
+  .logo{font-weight:800;font-size:1.15rem;color:var(--white);letter-spacing:.02em}
+  .logo b{color:var(--gold);font-size:1.3em;letter-spacing:.05em}
+  nav .call-top{background:var(--gold);color:#141414;text-decoration:none;font-weight:800;padding:9px 18px;border-radius:6px;font-size:.95rem}
+
+  header{padding:78px 22px 66px;position:relative;overflow:hidden;background:
+    radial-gradient(ellipse at 80% 20%, rgba(212,175,55,.12), transparent 55%), var(--jet)}
+  .hwrap{max-width:960px;margin:0 auto;position:relative;z-index:2}
+  .seven-bg{position:absolute;right:-30px;bottom:-60px;font-family:"Bricolage Grotesque",sans-serif;font-size:22rem;font-weight:800;color:rgba(212,175,55,.07);line-height:1;user-select:none;z-index:1}
+  .kicker{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+  h1{font-size:clamp(2.2rem,6.4vw,3.6rem);line-height:1.06;font-weight:800;text-wrap:balance;max-width:760px}
+  h1 em{font-style:normal;color:var(--gold)}
+  .sub{max-width:600px;margin:20px 0 30px;font-size:1.1rem;color:var(--smoke)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:8px;font-size:1.02rem}
+  .btn.solid{background:var(--gold);color:#141414}
+  .btn.line{border:2px solid #3a3a3f;color:var(--white)}
+
+  .stripes{height:9px;background:repeating-linear-gradient(90deg,var(--gold) 0 60px, transparent 60px 78px)}
+
+  .trust{background:var(--panel);color:var(--smoke);padding:20px 22px}
+  .trust-in{max-width:960px;margin:0 auto;display:flex;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center;font-size:.95rem}
+  .trust-in b{color:var(--white)}
+  .trust-in .st{color:var(--gold)}
+
+  section{padding:64px 22px}
+  .wrap{max-width:960px;margin:0 auto}
+  .eyebrow{color:var(--gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+  h2{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:14px;text-wrap:balance}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+  .svc{background:var(--panel);border:1px solid #2e2e33;border-radius:12px;padding:22px}
+  .svc .n{font-family:"Bricolage Grotesque",sans-serif;color:var(--gold);font-weight:800;font-size:1.4rem;display:block;margin-bottom:8px}
+  .svc h3{font-size:1.05rem;margin-bottom:6px}
+  .svc p{font-size:.92rem;color:var(--smoke)}
+
+  .photo-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:36px}
+  .photo-slot{background:repeating-linear-gradient(45deg,#232326,#232326 12px,#1c1c1f 12px,#1c1c1f 24px);border:2px dashed #3c3c41;border-radius:10px;min-height:170px;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center}
+  .photo-slot p{font-size:.85rem;color:#8b877c;max-width:210px}
+
+  .why{background:var(--gold);color:#141414}
+  .why h2,.why .eyebrow{color:#141414}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .why-item{border-top:3px solid #141414;padding-top:14px}
+  .why-item h3{font-size:1.02rem;margin-bottom:6px}
+  .why-item p{font-size:.92rem;color:#3d3316}
+
+  .review-band{background:var(--panel);text-align:center;border-top:1px solid #2e2e33;border-bottom:1px solid #2e2e33}
+  .big-stars{font-size:2rem;color:var(--gold);letter-spacing:.12em;margin-bottom:8px}
+  .review-band .q{font-size:1.25rem;max-width:640px;margin:0 auto;font-weight:600;text-wrap:balance}
+  .review-band .attr{margin-top:10px;color:var(--smoke);font-size:.9rem}
+
+  .contact{background:var(--jet)}
+  .c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  .c-card{background:var(--panel);border:1px solid #2e2e33;border-radius:12px;padding:22px}
+  .c-card h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--smoke);margin-bottom:8px}
+  .c-card p,.c-card a{color:var(--white);font-size:1.05rem;text-decoration:none;font-weight:600}
+  .c-card .hours{font-size:.95rem;font-weight:400;color:var(--smoke)}
+
+  footer{background:#0e0e0f;color:#6d6a62;text-align:center;padding:26px 20px;font-size:.85rem}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;background:var(--gold);text-align:center;padding:13px;z-index:60;display:none}
+  .callbar a{color:#141414;font-weight:800;text-decoration:none;font-size:1.05rem}
+  @media(max-width:640px){.callbar{display:block} body{padding-bottom:52px}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">✨ Free design preview — built for 777 Auto Body Shop by Ford Web Design · text or call Eli to make it yours</div>
+
+<nav>
+  <div class="logo"><b>777</b> Auto Body Shop</div>
+  <a class="call-top" href="tel:8082001423">📞 (808) 200-1423</a>
+</nav>
+
+<header>
+  <div class="seven-bg">777</div>
+  <div class="hwrap">
+    <span class="kicker">Mapunapuna · Honolulu · 20+ Years</span>
+    <h1>Lucky number.<br/><em>Skilled hands.</em></h1>
+    <p class="sub">Twenty-plus years of collision repair in Mapunapuna — because getting your car back to perfect shouldn't come down to luck.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="tel:8082001423">Get a Free Estimate</a>
+      <a class="btn line" href="#services">What We Do</a>
+    </div>
+  </div>
+</header>
+<div class="stripes"></div>
+
+<div class="trust">
+  <div class="trust-in">
+    <div><span class="st">★★★★★</span><br/><b>4.7 on Google</b></div>
+    <div><b>20+ years</b><br/>of body-shop experience</div>
+    <div><b>Mapunapuna</b><br/>central to the whole island</div>
+    <div><b>Free estimates</b><br/>straight numbers, fast</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>Three ways we earn the stars.</h2>
+    <div class="svc-grid">
+      <div class="svc"><span class="n">7</span><h3>Collision Repair</h3><p>Accident damage repaired straight, solid, and safe — panels, frames, and finish brought back to true.</p></div>
+      <div class="svc"><span class="n">7</span><h3>Restoration &amp; Refinish</h3><p>Expert restoring and repairing from techs with two decades in — your car leaves looking like the accident never happened.</p></div>
+      <div class="svc"><span class="n">7</span><h3>Free Estimates</h3><p>Bring it in, get an honest number the same visit. No games, no padding, no surprises on the invoice.</p></div>
+    </div>
+
+    <div class="photo-strip">
+      <div class="photo-slot"><p>📷 Placeholder — the shop on Awaawaloa St goes here</p></div>
+      <div class="photo-slot"><p>📷 Placeholder — a repair you're proud of (before &amp; after)</p></div>
+      <div class="photo-slot"><p>📷 Placeholder — the crew at work, real photos only</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <p class="eyebrow">Why 777</p>
+    <h2>Twenty years of making "as good as new" literal.</h2>
+    <div class="why-grid">
+      <div class="why-item"><h3>Experienced techs</h3><p>Skilled technicians who've seen every kind of damage Hawaii roads can deal out.</p></div>
+      <div class="why-item"><h3>Central location</h3><p>Mapunapuna — minutes from the airport, downtown, and the freeway, easy drop-off from anywhere on O'ahu.</p></div>
+      <div class="why-item"><h3>4.7 stars, earned</h3><p>Customers rate the work, not the promises. Ours speak for themselves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="review-band">
+  <div class="wrap">
+    <div class="big-stars">★★★★★</div>
+    <p class="q">Rated 4.7 on Google — twenty years of drivers who got their cars back right.</p>
+    <p class="attr">777 Auto Body Shop · Mapunapuna</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Come see us</p>
+    <h2>Free estimate. Same-visit answer.</h2>
+    <div class="c-grid">
+      <div class="c-card"><h3>Call</h3><a href="tel:8082001423">(808) 200-1423</a></div>
+      <div class="c-card"><h3>Visit</h3><p>2847 Awaawaloa St, Ste A<br/>Honolulu, HI 96819</p></div>
+      <div class="c-card"><h3>Hours</h3><p class="hours">Mon–Fri · 9:00am – 5:00pm<br/>Sat &amp; Sun · Closed</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>777 Auto Body Shop · 2847 Awaawaloa St Ste A, Honolulu · (808) 200-1423<br/>Design preview by Ford Web Design — fordwebdesign.com</footer>
+
+<div class="callbar"><a href="tel:8082001423">📞 Tap to call 777 — (808) 200-1423</a></div>
+
+</body>
+</html>
